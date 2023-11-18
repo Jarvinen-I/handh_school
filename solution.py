@@ -9,9 +9,9 @@ def get_array(n: int) -> list:
     
     while len(array) < n:
         len_subarrays = [len(i) for i in array] # длины всех подмассивов
-        subarray_size = randint(1, n ** 2) # размер нового подмассива
+        subarray_size = randint(1, n) # размер нового подмассива
         if subarray_size not in len_subarrays:
-            subarray = [randint(-n ** 2, n ** 2) for i in range(subarray_size)]
+            subarray = [randint(-n, n) for i in range(subarray_size)]
             array.append(subarray)
     
     sorted_array = []
